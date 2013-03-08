@@ -1,0 +1,36 @@
+class: "GraphSearchTest"
+algorithm: "uniformCostSearch"
+
+# The following section specifies the search problem and the solution.
+# The graph is specified by first the set of start states, followed by
+# the set of goal states, and lastly by the state transitions which are
+# of the form: 
+#      <start state> <actions> <end state> <cost>
+#
+#           C
+#           ^
+#           |
+#      2    V   4 
+# *A -----> B -----> [H]
+#   <-----  |          
+#           V
+#  G <----- D -----> E
+#           |
+#         2 | 
+#           V
+#          [F]
+#
+graph: """
+start_state: A
+goal_states: H F
+A 0 B 2
+B 0 H 4
+B 1 D 1
+B 2 C 1
+B 3 A 1
+C 0 B 1
+D 0 E 1
+D 1 F 2
+D 2 G 1
+"""
+
